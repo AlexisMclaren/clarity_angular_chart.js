@@ -1,0 +1,43 @@
+<div class="clr-columns">
+  <div class="clr-row">
+    <div *ngFor="let game of videoGames" class="clr-col-12 clr-col-sm-4">
+      <div class="card">
+        <div class="card-img">
+          <img src="">
+        </div>
+        <div class="card-block">
+          <h4 class="card-title">{{game.name}}</h4>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">{{game.titleId}}</li>
+          <li class="list-group-item">{{game.publisherId}}</li>
+          <li class="list-group-item">{{game.developerId}}</li>
+          <li class="list-group-item">{{game.cost}}</li>
+          <li class="list-group-item">{{game.gameEngineId}}</li>
+          <li class="list-group-item">{{game.developer.name}}</li>
+          <li class="list-group-item">{{game.gameEngine.name}}</li>
+          <li class="list-group-item">{{game.publisher.name}}</li>
+          <li class="list-group-item">
+            <ul id="Genre" *ngFor="let genreItem of game.titleGenre">
+              <li>{{genreItem.genre.description}}</li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <ul id="Mode" *ngFor="let modeItem of game.titleMode">
+              <li>{{modeItem.mode.mode1}}</li>
+            </ul>
+          </li>
+          <li class="list-group-item">
+            <ul id="Plat" *ngFor="let platformItem of game.titlePlatform">
+              <li>{{platformItem.platform.description}}</li>
+            </ul>
+          </li>
+        </ul>
+        <div class="card-footer">
+          <a href="..." class="btn btn-sm btn-link">Action 1</a>
+          <a href="..." class="btn btn-sm btn-link">Action 2</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

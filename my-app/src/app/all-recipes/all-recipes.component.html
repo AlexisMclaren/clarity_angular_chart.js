@@ -1,0 +1,39 @@
+<div class="clr-row">
+
+<div *ngFor="let recipe of recipes"  class="clr-col-lg-4 clr-col-sm-6 clr-col-12">
+    <div class="card">
+            <div class="card-header">
+                {{recipe.name}}
+            </div>    
+            <div class="card-block">
+                <ul *ngFor="let ing of recipe.ingredients">
+                    <li>{{ing}}</li>
+                   
+                </ul>
+               <ul *ngFor="let part of recipe.ingredientsItems">
+                   
+                   <li>{{part.title}}</li>
+                   <ul *ngFor="let ing of part.ingredients">
+                       <li>{{ing}}</li>
+                   </ul>
+                </ul>
+                
+            </div>
+            <div class="card-block">
+                <p>Category: {{recipe.category}}</p>
+            </div> 
+            <div class="card-block">
+                <div class="card-text">
+                     <p>Comment and rating out of five:</p>
+                </div>
+                <ul *ngFor="let rating of recipe.rating">
+                    <li>{{rating.rating}} - {{rating.comments}}</li>
+                </ul>
+            </div>
+             <div class="card-footer">
+                
+            </div>
+        </div>
+</div>
+ 
+</div>

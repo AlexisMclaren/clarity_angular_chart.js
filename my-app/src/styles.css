@@ -1,0 +1,30 @@
+
+.sidenav .nav-group .nav-list .nav-link.active, .sidenav .sidenav-content>.nav-link.active{
+	background: #9b56bb5c;
+}
+
+.login-wrapper {
+    background: none;
+    height: auto;
+   }
+
+.login-wrapper .login {
+ 
+    min-height: 0;
+    
+
+}
+
+.clr-input-group {
+    border-bottom: none;  
+}
+
+.header .branding, header .branding {
+ 
+    min-width: 9rem;
+    
+}
+
+.content-container .sidenav{
+	margin-right: 0;
+}
