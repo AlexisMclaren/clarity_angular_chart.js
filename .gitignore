@@ -45,5 +45,9 @@ testem.log
 .DS_Store
 Thumbs.db
 
+# Ignore webap.js
+
+webap.js
+
 
 
